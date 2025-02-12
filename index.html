@@ -1,157 +1,208 @@
+
 <!DOCTYPE html>
 <html lang="ko">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>강원천문대</title>
-    <!--css-->
-    <link rel="stylesheet" href="css/style.css">
-    <!-- script -->
-    <script src="../A-1/js/jquery.min.js"></script>
-    <script src="../A-1/js/script.js"></script>
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>김다영 포폴</title>
+</head>
+<link rel="stylesheet" href="/css/style.css" />
+<link rel="stylesheet" href="https://meyerweb.com/eric/tools/css/reset/reset.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
 </head>
 
 <body>
-    <div id="wrap">
-        <header id="header">
-            <h1 class="logo">
-                <a href="#">강원천문대</a>
-            </h1>
-            <nav class="nav">
-                <ul>
-                    <li>
-                        <a href="#">강원천문대</a>
-                        <ul class="submenu">
-                            <li><a href="#">천문대소개</a></li>
-                            <li><a href="#">인사말</a></li>
-                            <li><a href="#">오시는길</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="#">이용안내</a>
-                        <ul class="submenu">
-                            <li><a href="#">프로그램</a></li>
-                            <li><a href="#">관람시간표</a></li>
-                            <li><a href="#">이달의 별자리</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="#">천문대예약</a>
-                        <ul class="submenu">
-                            <li><a href="#">예약하기</a></li>
-                            <li><a href="#">예약확인</a></li>
-                            <li><a href="#">예약취소</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="#">커뮤니티</a>
-                        <ul class="submenu">
-                            <li><a href="#">공지사항</a></li>
-                            <li><a href="#">방문후기</a></li>
-                            <li><a href="#">자유게시판</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </nav>
-        </header>
-        <!--header-->
-        <article id="slider">
-            <div class="sliderWrap">
-                <div class="slider s1">
-                    <a href="#"><img src="img/slider01.jpg" alt="천문과학교육관 소개"></a>
-                    <div class="text">
-                        <h2>천문과학교육관 시설 소개</h2>
-                        <p>영상강의실로 놀러오세요!</p>
-                    </div>
-                </div>
-                <div class="slider s2">
-                    <a href="#"><img src="img/slider02.jpg" alt="천문과학교육관 이용 안내"></a>
-                    <div class="text">
-                        <h2>천문과학교육관 이용 안내</h2>
-                        <p>어린이를 위한 천문 과학관!</p>
-                    </div>
-                </div>
-                <div class="slider s3">
-                    <a href="#"><img src="img/slider03.jpg" alt="천문과학교육관 소개"></a>
-                    <div class="text">
-                        <h2>별을 보는 고요한 정상</h2>
-                        <p>강원천문대로 놀러오세요!</p>
-                    </div>
-                </div>
-            </div>
-        </article>
+  <div class="main-container">
+    <!--header-->
+    <header>
+      <div class="header_inner">
+        <a href="#">
+          <h1 class="logo box01">DDA_DAA</h1>
+        </a>
+        <ul class="gnb">
+          <li>
+            <a href="#"> PORTPOLIO </a>
+          </li>
+          <li>
+            <a href="#">CONTACT</a>
+          </li>
+        </ul>
+      </div>
+    </header>
 
-        <!--slider-->
-        <main id="contents">
-            <section class="info">
-                <h3 class="info-menu">
-                    <a href="#" class="active">공지사항</a>｜
-                    <a href="#">갤러리</a>
-                </h3>
-                <div class="info-cont">
-                    <div class="notice">
-                        <ul>
-                            <li class="popup-btn"><a href="#">강원천문대 2023년 휴관일 안내</a><span>2023.05.01</span></li>
-                            <li><a href="#">강원천문대 2023년 온라인 예매 안내</a><span>2023.05.02</span></li>
-                            <li><a href="#">강원천문대 휴관일 및 이벤트 안내</a><span>2023.05.03</span></li>
-                            <li><a href="#">강원천문대 주차장 이용 및 숙박 안내</a><span>2023.05.04</span></li>
-                        </ul>
-                    </div>
-                    <div class="gallery">
-                        <ul>
-                            <li><a href="#"><img src="images/gallery01.jpg" alt="독일 천문대"></a></li>
-                            <li><a href="#"><img src="images/gallery02.jpg" alt="미국 천문대"></a></li>
-                            <li><a href="#"><img src="images/gallery03.jpg" alt="영국 천문대"></a></li>
-                        </ul>
-                    </div>
-                </div>
-            </section>
-            <!--info-->
-            <section class="banner">
-                <h3>강원천문대 온라인 예매하기</h3>
-                <a href="#">예매하기</a>
-            </section>
-            <!--banner-->
-            <section class="link">
-                <h3>이달의 별자리 구경하기</h3>
-                <a href="#">바로가기</a>
-            </section>
-            <!--link-->
-        </main>
-        <!--contents-->
-        <footer id="footer">
-            <div class="footer1">
-                <h4>강원천문대</h4>
-            </div>
-            <div class="footer2">
-                <div class="footer2-1">
-                    <ul>
-                        <li><a href="#">개인정보처리방침</a></li>
-                        <li><a href="#">저작권보호정책</a></li>
-                        <li><a href="#">이메일무단수집거부</a></li>
-                        <li><a href="#">CCTV설치 및 운영지침</a></li>
-                    </ul>
-                </div>
-                <div class="footer2-2">
-                    COPYRIGHT © 2024, All Rightes Reseved
-                </div>
-            </div>
-        </footer>
-        <!--footer-->
-        <div class="popup-view">
-            <h3>강원천문대 공지사항</h3>
-            <p>
-                2023년 하반기 천체 관측 프로그램 참가 신청 안내
-                <br>안녕하세요. 강원천문대입니다. 2023년 하반기 천체 관측 프로그램에 참가하실 분들을 모집하고 있습니다. 관심 있는 분들은 많은 연락 바랍니다.
-            </p>
-            <a href="#" class="popup-close">닫기</a>
+    <!--main_visual-->
+
+    <section class="main-visual">
+      <div class="font110 txt01">
+        <p>KIM DA YOUNG</p>
+      </div>
+      <div class="main-txt02">
+        <div class="main-sub-txt profile">
+          <img src="" alt="">
         </div>
-        <!--popup-view-->
-    </div>
-    <!--wrap-->
+        <div class="main-sub-txt main-txt txt02 font110">
+          <p>
+            UI/UX DESIGNER<br />
+            WEB PUBLISHER
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!--sub txt-->
+    <section class="sub-txt-cont">
+      <div class="sub-txt">
+        <p>
+          매일매일 변화하는 웹 트렌드와 기술을 익히며, 새로운 디자인과 툴을<br />
+          소화하는 것을 좋아하며 그 과정에서 어려움을 만날 때마다,<br />
+          더 큰 성취로 이어질 것이라는 기대감과 함께 더 높은 목표를 만들어갑니다.<br />
+          저만의 스타일과 창의성을 더욱 발전시켜, 사용자들에게 편리함과<br />
+          새로운 영감을 줄 수 있는 멋진 웹디자이너가 되고 싶습니다.
+        </p>
+      </div>
+    </section>
+
+  
+
+    <!--side text-->
+    <section class="contact">
+      <p>contact me</p>
+    </section>
+
+    <!--footer-->
+    <footer class="footer">
+      <p>Email<br>
+        dyfruit@naver.com<br><br>
+        ⓒ 2025 Kim dayoung. all rights reserved.
+      </p>
+    </footer>
+
+    <!--scroll background color-->
+    <script>
+      gsap.to("body", {
+        backgroundColor: "#000",
+        scrollTrigger: {
+          trigger: ".sub-txt-cont",
+          scrub: true,
+          start: "40% bottom",
+          end: "20% 70%",
+        },
+      });
+    </script>
+
+    <!--scroll background color-->
+    <script>
+      gsap.to("body", {
+        backgroundColor: "#000",
+        scrollTrigger: {
+          trigger: ".sub-txt-cont",
+          scrub: true,
+          start: "40% bottom",
+          end: "20% 70%",
+        },
+      });
+    </script>
+
+    <script>
+      gsap.to("sub-txt-cont", {
+        scrollTrigger: {
+          trigger: "sub-txt",
+          start: "top top",
+          end: "bottom bottom",
+          scrub: 3,
+        },
+        y: 10000,
+      })
+    </script>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        let d_width = 0; // 브라우저 가로
+        let d_height = 0; // 문서 전체의 높이
+
+        function tmp() {
+          // container의 가로사이즈(화면가로 * box 개수)
+          let con_width = $(window).outerWidth() * $('.pp-box').length;
+
+          $('.pp-container').css({
+            width: con_width,
+            height: '100vh',
+            position: 'fixed',
+            top: 0,
+            left: 0
+          });
+
+          // css에서 해도 상관없다.
+          $('.pp-box').css({
+            width: con_width / $('.pp-box').length,
+            height: '100vh',
+            float: 'left'
+          });
+
+          // box들을 위로 끌어올렸기 때문에 body의 높이는 100vh나 마찬가지인 상태. 
+          // 그래서 억지로 전체 box들의 세로크기 만큼 body에 줘야한다.(스크롤 내리기위함) 
+          // 이때 높이는 가로영역의 비율과 동일하게 준다. (이후 리미트를 주게 됨으로써 비율의 값이 정해진다.)
+          $('.pp-wrap').css({
+            height: '100vh'
+          });
+
+          let w_width = $(window).width(); // 화면의 가로값
+          let w_height = $(window).height() // 화면의 세로값
+
+          // 스크롤 될때의 리미트
+          d_width = con_width - w_width; // 전체 가로값 - 현재 화면의 가로값
+          d_height = $('.pp-wrap').height() - w_height // 전체 세로값 - 현재 화면의 세로값
+        }
+
+        tmp();
+
+        let array = [];
+        for (let i = 0; i < $('.pp-box').length; i++) {
+          array[i] = $('.pp-box').eq(i).offset().left
+        }
+
+        let chk = true;
+        $('.pp-box').on('mousewheel DOMMouseScroll', function () {
+
+          if (chk) {
+            // 휠 일정시간동안 막기
+            chk = false;
+            setTimeout(function () {
+              chk = true;
+            }, 500)
+
+            // 휠 방향 감지(아래: -120, 위: 120)
+            let w_delta = event.wheelDelta / 120;
+
+            // 휠 아래로
+            if (w_delta < 0 && $(this).next().length > 0) {
+              $('.pp-container').animate({
+                left: -array[$(this).index() + 1]
+              }, 500)
+            }
+            // 휠 위로
+            else if (w_delta > 0 && $(this).prev().length > 0) {
+              $('.pp-container').animate({
+                left: -array[$(this).index() - 1]
+              }, 500)
+            }
+          }
+        });
+
+        //브라우저를 resize했을시를 대비해 박스의 크기는 다시 구해준다.
+        $(window).resize(function () {
+          for (let i = 0; i < $('.pp-box').length; i++) {
+            array[i] = $('.pp-box').eq(i).offset().left
+          }
+
+          tmp();
+        })
+
+      });
+    </script>
 </body>
 
 </html>
