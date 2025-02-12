@@ -1,0 +1,56 @@
+@charset "UTF-8";
+
+/*reset*/
+
+* {
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #333;
+}
+img {
+  vertical-align: top;
+  width: 100%;
+}
+
+/*wrap*/
+
+#wrap {
+  width: 1200px;
+  position: relative;
+  margin: 0 auto;
+}
+
+/*header*/
+
+#header {
+  width: 100%;
+  background-color: #0c51a6;
+}
+
+.logo {
+  width: 20%;
+  height: 100px;
+}
+
+.logo a {
+  color: #fff;
+  display: inline-block;
+  padding: 30px 40px;
+}
+
+/*nav*/
+
+.nav {
+  width: 80%;
+  height: 100px;
+}
+
+.nav > ul {
+}
