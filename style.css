@@ -1,0 +1,178 @@
+@import url(reset.css);
+@import url("https://cdn.jsdelivr.net/gh/wanteddev/wanted-sans@v1.0.1/packages/wanted-sans/fonts/webfonts/variable/split/WantedSansVariable.min.css");
+
+/*reset*/
+*{
+  margin:0;
+  padding:0;
+  color:#333;
+}
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+li {
+  list-style: none;
+}
+
+img{
+  vertical-align: top;
+  width:100%;
+}
+
+body {
+  font-family: "PT Serif", serif;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.main-container {
+  margin: 0 auto;
+  padding: 0 3%;
+}
+
+/*헤더*/
+
+header {
+  position: fixed;
+  top: 0;
+  left: 3%;
+  right: 3%;
+}
+
+.header_inner {
+  width: 100%;
+  height: 5rem;
+  font-size: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  color: #db631d;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+}
+
+.gnb {
+  float: right;
+}
+
+.gnb a {
+  color: #db631d;
+}
+
+.gnb li {
+  float: left;
+}
+
+.gnb li:not(:last-child) {
+  margin-right: 20px;
+}
+
+/*메인비주얼 텍스트*/
+
+.main-visual {
+  width: 100%;
+  height: 70vh;
+}
+
+.font110 {
+  font-size: 110px;
+  font-weight: 500;
+  letter-spacing: -0.1;
+  margin: 10% 0 10% 0;
+}
+
+.main-txt02 {
+  display: flex;
+  justify-content: space-between;
+}
+
+.txt01 {
+  margin: 10% 0 10% 0;
+}
+
+.txt02 {
+  text-align: right;
+  line-height: 1em;
+}
+
+.profile img {
+  width: 50%;
+}
+
+/*서브 텍스트*/
+
+.sub-txt-cont {
+  width: 100%;
+  height: 70vh;
+  position: relative;
+}
+
+.sub-txt {
+  text-align: center;
+  color: #db631d;
+  line-height: 1.8em;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.name {
+  color: #db631d;
+  font-weight: 700;
+}
+/*포폴 컨텐츠*/
+.pp-wrap {
+  margin: 0;
+}
+.pp-container {
+  /* transition: all 0.5s; */
+}
+.pp-box {
+  /* 아래 두줄은 제이쿼리 부분에서 box에 css 주는거 없을때 필요  */
+  /* float: left;
+            width: calc(100% / 4); */
+  height: 100vh;
+  color: #db631d;
+  font-size: 100px;
+  line-height: 100vh;
+  text-align: center;
+  border: 5px solid #db631d;
+  box-sizing: border-box;
+}
+
+/*푸터*/
+.contact p {
+  position: fixed;
+  left: 50px;
+  top: 50%;
+  right: auto;
+  bottom: auto;
+  margin-right: 50px;
+  margin-bottom: 80px;
+  transform: translate(0px, -50%) rotate(-90deg);
+  font-family: "PT Serif", serif;
+  color: #db631d;
+  font-size: 17px;
+  font-weight: 400;
+}
+
+.footer {
+  position: fixed;
+  bottom: 20px;
+  left: 3%;
+  width: 100%;
+  margin: 100px 0 0 0;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.2;
+  color: #db631d;
+  z-index: 3;
+}
