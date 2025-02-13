@@ -2,9 +2,9 @@
 @import url("https://cdn.jsdelivr.net/gh/wanteddev/wanted-sans@v1.0.1/packages/wanted-sans/fonts/webfonts/variable/split/WantedSansVariable.min.css");
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@100&display=swap");
 /*reset*/
-*{
-  margin:0;
-  padding:0;
+* {
+  margin: 0;
+  padding: 0;
 }
 a {
   text-decoration: none;
@@ -15,9 +15,9 @@ li {
   list-style: none;
 }
 
-img{
+img {
   vertical-align: top;
-  width:100%;
+  width: 100%;
 }
 
 body {
@@ -27,9 +27,9 @@ body {
   overflow-x: hidden;
 }
 
-#wrap{
-  width:100%;
-  margin:0 auto;
+#wrap {
+  width: 100%;
+  margin: 0 auto;
 }
 
 .main-container {
@@ -38,26 +38,26 @@ body {
 
 /*진행바*/
 .parallax__progress progress {
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1000;
-    appearance: none;
-    width: 100%;
-    height: 5px;
-    border: none;
-    background: transparent;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  appearance: none;
+  width: 100%;
+  height: 5px;
+  border: none;
+  background: transparent;
 }
 progress::-webkit-progress-bar {
-    background: transparent;
+  background: transparent;
 }
 progress::-webkit-progress-value {
-    background: linear-gradient(to left, #ff6b01,#ff6b01,#ff6b01,#ff6b01,#ff6b01,#ff6b01);
-    background-attachment: fixed;
+  background-color: #ff6b01;
+  background-attachment: fixed;
 }
 progress::-moz-progress-bar {
-    background: linear-gradient(to left, #ff6b01,#ff6b01,#ff6b01,#ff6b01,#ff6b01,#ff6b01);
-    background-attachment: fixed;
+  background-color: #ff6b01;
+  background-attachment: fixed;
 }
 
 /*헤더*/
@@ -67,7 +67,7 @@ progress::-moz-progress-bar {
   top: 0;
   left: 3%;
   right: 3%;
-  z-index:1000;
+  z-index: 1000;
 }
 
 .header_inner {
@@ -85,32 +85,33 @@ progress::-moz-progress-bar {
 }
 
 .gnb {
-  position:relative;
-  left:0;
-  display:block;
+  position: relative;
+  left: 0;
+  display: block;
 }
 
 .gnb a {
   color: #db631d;
 }
 
-.gnb li{
+.gnb li {
   position: relative;
-  right:0;
+  right: 0;
   display: inline-block;
   margin-right: 20px;
-  text-align:center;
+  text-align: center;
   line-height: 30px;
-  cursor:pointer;
+  cursor: pointer;
 }
 
 .gnb li::after {
   position: absolute;
-  content:"";
+  content: "";
   display: block;
   border-bottom: 2px solid #db631d;
   transition: width 250ms ease-in-out;
-  left: auto; width: 0;
+  left: auto;
+  width: 0;
 }
 
 .gnb li:hover::after {
@@ -153,7 +154,6 @@ progress::-moz-progress-bar {
   width: 50%;
 }
 
-
 /*서브 텍스트*/
 
 .sub-txt-cont {
@@ -166,17 +166,17 @@ progress::-moz-progress-bar {
   text-align: center;
   color: #db631d;
   line-height: 1.8em;
-  transform:translate(-50%,-50%);
-  position:absolute;
-  top:50%;
-  left:50%;
-  font-size:35px;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 35px;
 }
 
 /*section01*/
 
 #section01 {
-flex-direction: column;
+  flex-direction: column;
 }
 
 .name {
@@ -187,67 +187,67 @@ flex-direction: column;
 /* section02 */
 
 #parallax__cont {
-    overscroll-behavior: none;
-    width: 400%;
-    height: 100vh;
-    display: flex;
-    flex-wrap: nowrap;
+  overscroll-behavior: none;
+  width: 400%;
+  height: 100vh;
+  display: flex;
+  flex-wrap: nowrap;
 }
 
 .parallax__item {
-width: 100%;
-height: 100vh;
-position: relative;
-display: flex;
-align-items: center;
-justify-content: center;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .parallax__item__num {
-font-size: 80px;
-color:#db631d;
-position: absolute;
-right: 0;
-bottom: 20px;
-font-family: "Lato";
-font-weight: 100;
-z-index: 100;
+  font-size: 80px;
+  color: #db631d;
+  position: absolute;
+  right: 0;
+  bottom: 20px;
+  font-family: "Lato";
+  font-weight: 100;
+  z-index: 100;
 }
 
 .parallax__item__imgWrap {
-width: 30%;
-padding-bottom: 18%;
-position: relative;
-overflow: hidden;
+  width: 30%;
+  padding-bottom: 18%;
+  position: relative;
+  overflow: hidden;
 }
 .parallax__item__img {
-position: absolute;
-left: -5%; 
-top: -5%;
-width: 100%;
-height: 100%;
-background-repeat: no-repeat;
-background-position: center center;
-background-size: cover;
- filter: saturate(0%);
-transition: all 1s;
+  position: absolute;
+  left: -5%;
+  top: -5%;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  filter: saturate(0%);
+  transition: all 1s;
 }
 .parallax__item__img:hover {
-filter: saturate(100%);
-transform: scale(1.025);
+  filter: saturate(100%);
+  transform: scale(1.025);
 }
 
 #section1 .parallax__item__img {
-background-image: url(https://picsum.photos/700/700);
+  background-image: url(https://picsum.photos/700/700);
 }
 #section2 .parallax__item__img {
-background-image: url(https://picsum.photos/700/700);
+  background-image: url(https://picsum.photos/700/700);
 }
 #section3 .parallax__item__img {
-background-image: url(https://picsum.photos/700/700);
+  background-image: url(https://picsum.photos/700/700);
 }
 #section4 .parallax__item__img {
-background-image: url(https://picsum.photos/700/700);
+  background-image: url(https://picsum.photos/700/700);
 }
 
 /*사이드*/
@@ -280,5 +280,5 @@ background-image: url(https://picsum.photos/700/700);
 }
 
 .aside span {
-  text-decoration:underline;
+  text-decoration: underline;
 }
