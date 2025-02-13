@@ -1,6 +1,6 @@
 @import url(reset.css);
 @import url("https://cdn.jsdelivr.net/gh/wanteddev/wanted-sans@v1.0.1/packages/wanted-sans/fonts/webfonts/variable/split/WantedSansVariable.min.css");
-
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100&display=swap");
 /*reset*/
 *{
   margin:0;
@@ -24,7 +24,7 @@ body {
   font-family: "PT Serif", serif;
   font-size: 14px;
   line-height: 24px;
-  overflow-x:hidden;
+  overflow-x: hidden;
 }
 
 #wrap{
@@ -33,7 +33,7 @@ body {
 }
 
 .main-container {
-  padding: 0 3%;
+  padding: 0 5%;
 }
 
 /*진행바*/
@@ -81,22 +81,40 @@ progress::-moz-progress-bar {
 
 .logo {
   color: #db631d;
-  text-decoration: none;
-  display: flex;
-  align-items: center;
   font-weight: bold;
 }
 
 .gnb {
-  float: right;
+  position:relative;
+  left:0;
+  display:block;
 }
 
 .gnb a {
   color: #db631d;
 }
 
-.gnb li {
-  float: left;
+.gnb li{
+  position: relative;
+  right:0;
+  display: inline-block;
+  margin-right: 20px;
+  text-align:center;
+  line-height: 30px;
+  cursor:pointer;
+}
+
+.gnb li::after {
+  position: absolute;
+  content:"";
+  display: block;
+  border-bottom: 2px solid #db631d;
+  transition: width 250ms ease-in-out;
+  left: auto; width: 0;
+}
+
+.gnb li:hover::after {
+  width: 100%;
 }
 
 .gnb li:not(:last-child) {
@@ -135,6 +153,7 @@ progress::-moz-progress-bar {
   width: 50%;
 }
 
+
 /*서브 텍스트*/
 
 .sub-txt-cont {
@@ -165,7 +184,73 @@ flex-direction: column;
   font-weight: 700;
 }
 
-/*푸터*/
+/* section02 */
+
+#parallax__cont {
+    overscroll-behavior: none;
+    width: 400%;
+    height: 100vh;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.parallax__item {
+width: 100%;
+height: 100vh;
+position: relative;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.parallax__item__num {
+font-size: 80px;
+color:#db631d;
+position: absolute;
+right: 0;
+bottom: 20px;
+font-family: "Lato";
+font-weight: 100;
+z-index: 100;
+}
+
+.parallax__item__imgWrap {
+width: 30%;
+padding-bottom: 18%;
+position: relative;
+overflow: hidden;
+}
+.parallax__item__img {
+position: absolute;
+left: -5%; 
+top: -5%;
+width: 100%;
+height: 100%;
+background-repeat: no-repeat;
+background-position: center center;
+background-size: cover;
+ filter: saturate(0%);
+transition: all 1s;
+}
+.parallax__item__img:hover {
+filter: saturate(100%);
+transform: scale(1.025);
+}
+
+#section1 .parallax__item__img {
+background-image: url(https://picsum.photos/700/700);
+}
+#section2 .parallax__item__img {
+background-image: url(https://picsum.photos/700/700);
+}
+#section3 .parallax__item__img {
+background-image: url(https://picsum.photos/700/700);
+}
+#section4 .parallax__item__img {
+background-image: url(https://picsum.photos/700/700);
+}
+
+/*사이드*/
 .contact p {
   position: fixed;
   left: 50px;
@@ -181,7 +266,7 @@ flex-direction: column;
   font-weight: 400;
 }
 
-.footer {
+.aside {
   position: fixed;
   bottom: 20px;
   left: 3%;
@@ -192,4 +277,8 @@ flex-direction: column;
   line-height: 1.2;
   color: #db631d;
   z-index: 3;
+}
+
+.aside span {
+  text-decoration:underline;
 }
