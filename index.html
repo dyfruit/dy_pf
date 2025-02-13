@@ -20,11 +20,11 @@
 
 <body>
   <!--진행바-->
-  <div class="parallax__progress"> 
+  <div class="parallax__progress">
     <progress max="100" value="0"></progress>
   </div>
   <div id="wrap">
-  <div class="main-container">
+    <div div class="main-container">
     <!--header-->
     <header class="header">
       <div class="header_inner">
@@ -32,7 +32,7 @@
           <h1 class="logo box01">KDY</h1>
         </a>
         <ul class="gnb">
-          <li><a href="#">PORTFOLIO</a></li>
+          <li><a href="sub/sub01.html">PORTFOLIO</a></li>
           <li><a href="#">CONTACT</a></li>
         </ul>
       </div>
@@ -67,17 +67,19 @@
         ⓒ 2025 Kim dayoung. all rights reserved.
       </p>
     </aside>
-</div>
+    
+    </div>
+
     <!--section 01-->
-  <section id="section01" class="parallax_item sub-txt-cont">
+    <section id="section01" class="parallax_item sub-txt-cont">
     <div class="sub-txt">
     <div class="parallax_item_text t1">새로움을 탐구하며,</div>
     <div class="parallax_item_text t2">도전에서 성장하고,</div>
     <div class="parallax_item_text t3">목표를 향해 나아갑니다.</div>
     <!-- <div class="parallax_item_text i1"><img src="https://picsum.photos/200/200" alt="img1"></div> -->
-  </section>
+    </section>
 
-  <section id="section02">
+    <section id="section02">
     <main id="parallax__cont">
         <section id="section1" class="parallax__item">
           <span class="parallax__item__num">01</span>
@@ -107,9 +109,12 @@
             </figure>
         </section>
     </main>
-  </section>
+    </section>
         
-</div>
+    <section id="section03">
+          <img src="https://picsum.photos/2000/1100" alt="img1">
+    </section>
+  </div>
     <!--scroll background color-->
     <script>
       gsap.to("body", {
@@ -144,16 +149,10 @@ ScrollTrigger.create({
     </script>
 
     <script>
-    gsap.to("progress", {
+gsap.to("progress", {
     value: 100,
     ease: "none",
-    scrollTrigger: {
-    scrub: 0.3,
-    onUpdate: (self) => {
-    const scrollProgress = (self.progress * 100).toFixed(2);
-    document.querySelector("progress").value = scrollProgress;
-    }
-  }
+    scrollTrigger: { scrub: 0.3 }
 });
   </script>
   <script>
