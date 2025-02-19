@@ -5,20 +5,22 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>kdy</title>
+  <title>김다영 포폴</title>
 </head>
-<link rel="stylesheet" href="css/style.css"/>
+<link rel="stylesheet" href="/css/style.css"/>
 <link rel="stylesheet" href="https://meyerweb.com/eric/tools/css/reset/reset.css" />
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.1/ScrollToPlugin.min.js"></script>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@2.0.1/dist/lenis.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/split-type@0.5.0/dist/split-type.min.js"></script>
 
-</head>
-
-<body>
   <!--진행바-->
   <div class="parallax__progress">
     <progress max="100" value="0"></progress>
@@ -27,9 +29,10 @@
     <div div class="main-container">
     <!--header-->
     <header class="header">
+      <div class="cursor"></div>
       <div class="header_inner">
         <a href="#">
-          <h1 class="logo box01"><a href="../index.html">KDY</a></h1>
+          <h1 class="logo box01">KDY</h1>
         </a>
         <ul class="gnb">
           <li><a href="sub/sub01.html">PORTFOLIO</a></li>
@@ -39,8 +42,7 @@
     </header>
 
     <!--main_visual-->
-
-    <section class="main-visual">
+    <section class="main">
       <div class="font110 txt01" data-aos="fade-up" data-aos-duration="2000" data-aos-anchor-placement="top-center">
         <p>KIM DA YOUNG</p>
       </div>
@@ -48,13 +50,14 @@
         <div class="main-sub-txt profile">
           <img src="" alt="">
         </div>
-        <div class="main-sub-txt main-txt txt02 font110" data-aos-duration="2000" data-aos-anchor-placement="top-center">
+        <div class="main-sub-txt main-txt txt02 font110" data-aos="fade-up"  data-aos-duration="2000" data-aos-anchor-placement="top-center">
           <p>
             UI/UX DESIGNER<br/>WEB PUBLISHER
           </p>
         </div>
       </div>
     </section>
+    
 
     <!--side text-->
     <section class="contact">
@@ -114,7 +117,21 @@
     <section id="section03">
           <img src="https://picsum.photos/2000/1100" alt="img1">
     </section>
+
+      <section class="about" id="sc3">
+  <h2 class="blind">소개</h2>
+  <div class="about__title">
+    <strong>더 나은 결과를 추구하는</strong>
   </div>
+
+  <div class="about__desc">
+    <p>안녕하세요, 웹 퍼블리셔 양종근입니다. ...</p>
+    <p>개발 업무는 혼자 이루어지지 않음을 인지하고 ...</p>
+  </div>
+</section>
+
+</body>
+
     <!--scroll background color-->
     <script>
       gsap.to("body", {
@@ -122,14 +139,11 @@
         scrollTrigger: {
           trigger: ".sub-txt-cont",
           scrub: true,
-          start: "40% bottom",
-          end: "20% 70%",
+          start: "50% bottom",
+          end: "70%",
         },
       });
-    </script>
 
-
-    <script>
 const ani8 = gsap.timeline();
 ani8.from("#section01 .t1", {x: innerWidth * 1})
     .from("#section01 .t2", {x: innerWidth * -1})
@@ -146,21 +160,17 @@ ScrollTrigger.create({
     markers: false,
     anticipatePin: 1
 });
-    </script>
 
-    <script>
 gsap.to("progress", {
     value: 100,
     ease: "none",
     scrollTrigger: { scrub: 0.3 }
 });
-  </script>
-  <script>
+
   AOS.init({
     once:true,
   });
-  </script>
-  <script>
+
   let sections = gsap.utils.toArray(".parallax__item");
 
   gsap.to(sections, {
@@ -171,11 +181,58 @@ gsap.to("progress", {
   pin: true,
   scrub: 1,
   snap: 1 / (sections.length - 1),
-  end: "+=5000",
+  end: "+=6000",
   // end: document.querySelector("#parallax__cont").offsetWidth,
     }
   });
-  </script>
-</body>
+
+let mouseCursor = document.querySelector(".cursor");
+let navLinks = document.querySelectorAll(".gnb li a, .parallax__item__img, .logo");
+
+// 마우스 이동 시 커서 위치 업데이트
+window.addEventListener("mousemove", (e) => {
+  mouseCursor.style.left = `${e.clientX}px`;
+  mouseCursor.style.top = `${e.clientY}px`;
+});
+
+// 네비게이션 링크에 마우스 호버 효과 추가
+navLinks.forEach((link) => {
+  link.addEventListener("mouseenter", () => {
+    mouseCursor.classList.add("cursor-grow");
+    link.classList.add("hovered-link");
+  });
+  link.addEventListener("mouseleave", () => {
+    mouseCursor.classList.remove("cursor-grow");
+    link.classList.remove("hovered-link");
+  });
+});
+
+  const lenis = new Lenis();
+
+  lenis.on("scroll", ScrollTrigger.update);
+
+  gsap.ticker.add((time) => {
+    lenis.raf(time * 800);
+  });
+
+  gsap.ticker.lagSmoothing(0);
+
+  const aboutText = new SplitType(".about .about__title strong", {
+    types: "words, chars",
+  });
+
+  const about = gsap
+    .timeline({
+      scrollTrigger: {
+        trigger: ".about",
+        start: "0% 70%",
+        end: "100% 100%",
+        scrub: 0,
+      },
+    })
+    .from(".about .char", { yPercent: 100, opacity: 0, stagger: 0.5, duration: 1.5 }, "text")
+    .to(".about .about__desc", { yPercent: 0, opacity: 1 }, "text");
+</script>
+
 
 </html>
