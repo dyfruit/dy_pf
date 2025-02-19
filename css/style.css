@@ -1,23 +1,18 @@
-@import url(reset.css);
 @import url("https://cdn.jsdelivr.net/gh/wanteddev/wanted-sans@v1.0.1/packages/wanted-sans/fonts/webfonts/variable/split/WantedSansVariable.min.css");
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@100&display=swap");
-/*reset*/
-* {
-  margin: 0;
-  padding: 0;
-}
+
+
 a {
   text-decoration: none;
-  color: #333;
+  cursor: none;
+}
+html {
+  --color-texta: #1d1d1d;
+  --color-textb: #fff;
 }
 
-li {
-  list-style: none;
-}
-
-img {
-  vertical-align: top;
-  width: 100%;
+::selection {
+  background-color: #ff6b01;
 }
 
 body {
@@ -25,6 +20,36 @@ body {
   font-size: 14px;
   line-height: 24px;
   overflow-x: hidden;
+  cursor: none;
+}
+.cursor {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  position: fixed;
+  z-index: 1000;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  transition: all 0.3s ease;
+  transition-property: background, transform;
+  backdrop-filter: sepia(20%);
+  background-size: cover;
+  background-color: #ff6b01;
+  mix-blend-mode: difference; /* 커서 영역 내에서 색상이 반전됨 */
+}
+
+.cursor-grow {
+  transform: scale(4); /* 커서 확대 */
+  background-color: var(--color-texta);
+}
+
+.gnb li a {
+  color: var(--color-texta); /* 기본 텍스트 색상 */
+  transition: color 0.3s ease;
+}
+
+.gnb li a.hovered-link {
+  color:#fff;!important; /* 반전된 텍스트 색상 */
 }
 
 #wrap {
@@ -124,6 +149,7 @@ progress::-moz-progress-bar {
 
 /*메인비주얼 텍스트*/
 
+
 .main-visual {
   width: 100%;
   height: 70vh;
@@ -170,7 +196,7 @@ progress::-moz-progress-bar {
   position: absolute;
   top: 50%;
   left: 50%;
-  font-size: 35px;
+  font-size: 3rem;
 }
 
 /*section01*/
@@ -281,4 +307,38 @@ progress::-moz-progress-bar {
 
 .aside span {
   text-decoration: underline;
+}
+
+/*gird*/
+
+.grid_wrap {
+  width: 100%;
+  position: relative;
+  top: 0;
+  left: 0;
+  margin-top: 20rem;
+}
+
+.grid_item {
+  display: flex;
+  height: 50rem;
+}
+
+.grid_list {
+  width: 100%;
+  flex: 1;
+}
+.about {
+  background-color: #fff;
+  padding: 500px 40px;
+}
+
+.about__title {
+  max-width: 1024px;
+  overflow: hidden;
+}
+.about__title strong {
+  font-size: 100px;
+  font-weight: 700;
+  line-height: 1;
 }
