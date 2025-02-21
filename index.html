@@ -6,7 +6,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>김다영 포폴</title>
-<link rel="stylesheet" href="css/style.css"/>
+<link rel="stylesheet" href="/css/style.css"/>
 <link rel="stylesheet" href="https://meyerweb.com/eric/tools/css/reset/reset.css" />
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -44,7 +44,7 @@
     <section class="main-visual">
       <div class="bg-video">
   <video class="bg-video__content" autoplay muted loop>
-    <source src="video/pf_video.mp4" type="video/mp4" />
+    <source src="/video/pf_video.mp4" type="video/mp4" />
   </video>
 </div>
       <div class="main_wrap" id="main_txt">
@@ -53,24 +53,9 @@
       </div>
       </div>
     </section>
-    
-
-    <!--side text-->
-    <section class="contact">
-      <p>contact me</p>
-    </section>
-
-    <aside class="aside">
-      <p>Email<br>
-        <span>dyfruit@naver.com</span><br><br>
-        ⓒ 2025 Kim dayoung. all rights reserved.
-      </p>
-    </aside>
-    
-    </div><!--main-container-->
 
 
-    <section id="section02">
+   <section id="section01">
     <main id="parallax__cont">
         <section id="section1" class="parallax__item">
           <span class="parallax__item__num">01</span>
@@ -101,6 +86,61 @@
         </section>
     </main>
     </section>   
+
+<section id="section02">
+ <section class="skill_wrap">
+                <div class="group-bottom">
+                    <a href="#">
+                        <ul class="skill-list">
+                          
+                            <li class="skill-item">
+                                <div class="name-wrap">
+                                    <div class="name-box" >
+                                        <span class="number">01</span>
+                                        <p class="name"><span>WEB ACCESSIBILITY</span></p>
+                                    </div>
+                                    <p class="name2"><span>UI/UX</span></p>
+                                </div>
+                                
+                            </li>
+                            <li class="skill-item">
+                                <div class="name-wrap">
+                                    <div class="name-box">
+                                        <span class="number">02</span>
+                                        <p class="name"><span>DESIGN TOOLS</span></p>
+                                    </div>
+                                    <p class="name2"><span>ADOBE</span></p>
+                                </div>
+                            </li>
+                            <li class="skill-item">
+                                <div class="name-wrap">
+                                    <div class="name-box">
+                                        <span class="number">03</span>
+                                        <p class="name"><span>PUBLISHING</span></p>
+                                    </div>
+                                    <p class="name2"><span>HTML/CSS</span></p>
+                                </div>
+                            </li>
+                        </ul>
+                    </a>
+                </div>
+            </section>
+</section>
+
+    <!--side text-->
+    <section class="contact">
+      <p>contact me</p>
+    </section>
+
+    <aside class="aside">
+      <p>Email<br>
+        <span>dyfruit@naver.com</span><br><br>
+        ⓒ 2025 Kim dayoung. all rights reserved.
+      </p>
+    </aside>
+    
+    </div><!--main-container-->
+
 
 <div class="visual">
   <div class="visual__loop">
@@ -208,7 +248,7 @@ ScrollTrigger.create({
   });
 
 let mouseCursor = document.querySelector(".cursor");
-let navLinks = document.querySelectorAll(".gnb li a, .parallax__item__img, .logo, .txt01, .txt02, .aside span");
+let navLinks = document.querySelectorAll(".gnb li a, .parallax__item__img, .logo, .txt01, .txt02, .aside span, #footer, .skill-list");
 
 // 마우스 이동 시 커서 위치 업데이트
 window.addEventListener("mousemove", (e) => {
@@ -229,7 +269,20 @@ navLinks.forEach((link) => {
 });
 
 
-</script>
+document.querySelectorAll(".skill-item").forEach((item) => {
+    item.addEventListener("mouseenter", () => {
+        gsap.to(item.querySelector(".name-box"), { opacity: 1, y: 0, duration: 0.2, ease: "power2.out" });
+        gsap.to(item.querySelector(".name2"), { opacity: 1, y: 0, duration: 0.2, ease: "power2.out" });
+    });
 
+    item.addEventListener("mouseleave", () => {
+        gsap.to(item.querySelector(".name-box"), { opacity: 1, y: 0, duration: 0.2, ease: "power2.out" });
+        gsap.to(item.querySelector(".name2"), { opacity: 0, y: 0, duration: 0.2, ease: "power2.out" });
+    });
+});
+
+
+
+</script>
 
 </html>
