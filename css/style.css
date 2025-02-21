@@ -152,7 +152,7 @@ progress::-moz-progress-bar {
 
 .main-visual {
   width: 100%;
-  height: 70vh;
+  height: 100vh;
 }
 
 #main_txt {
@@ -217,18 +217,7 @@ progress::-moz-progress-bar {
   font-size: 3rem;
 }
 
-/*section01*/
-
-#section01 {
-  flex-direction: column;
-}
-
-.name {
-  color: #fff;
-  font-weight: 700;
-}
-
-/* section02 */
+/* section01 */
 
 #parallax__cont {
   overscroll-behavior: none;
@@ -364,7 +353,7 @@ progress::-moz-progress-bar {
   height: 50px;
   overflow: hidden;
   display: flex;
-  margin: 100px 0 100px 0;
+  margin: 150px 0 100px 0;
 }
 
 .visual.left {
@@ -391,12 +380,238 @@ progress::-moz-progress-bar {
   margin-right: 50px;
 }
 
-/* 하단 */
+/* skill */
+
+.name {
+  color: #fff;
+}
+
+.name2 {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.skill_wrap {
+  position: relative;
+  color: #fff;
+}
+
+.skill_wrap .group-bottom a {
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .skill_wrap .group-bottom a {
+    pointer-events: none;
+  }
+}
+
+.skill_wrap .group-bottom .skill-list .skill-item {
+  padding: 1rem 3rem;
+  overflow: hidden;
+  border-bottom: 1px solid #fff;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .skill_wrap .group-bottom .skill-list .skill-item {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .skill_wrap .group-bottom .skill-list .skill-item:first-child {
+    border-top: 1px solid #fff;
+  }
+}
+
+.skill_wrap .group-bottom .skill-list .skill-item.mobile {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .skill_wrap .group-bottom .skill-list .skill-item.mobile {
+    display: block;
+  }
+}
+
+.skill_wrap .group-bottom .skill-list .skill-item .name-wrap {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media (max-width: 768px) {
+  .skill_wrap .group-bottom .skill-list .skill-item .name-wrap {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+
+  .skill_wrap
+    .group-bottom
+    .skill-list
+    .skill-item
+    .name-wrap.on
+    .name-box
+    .name
+    span {
+    -webkit-transform: translateY(100%);
+    transform: translateY(100%);
+    opacity: 0;
+  }
+
+  .skill_wrap .group-bottom .skill-list .skill-item .name-wrap.on .name2 span {
+    -webkit-transform: translateY(0%);
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .skill_wrap .group-bottom .skill-list .skill-item .name-box {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+}
+
+.skill_wrap .group-bottom .skill-list .skill-item .number {
+  font-family: "DegularDisplay", sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.25;
+  letter-spacing: 0.04em;
+  padding: 0.75rem;
+  color: #fff;
+}
+
+@media (max-width: 1024px) {
+  .skill_wrap .group-bottom .skill-list .skill-item .number {
+    font-size: 0.875rem;
+    line-height: 1.28;
+  }
+}
+
+@media (max-width: 768px) {
+  .skill_wrap .group-bottom .skill-list .skill-item .number {
+    padding: 0;
+  }
+}
+
+.skill_wrap .group-bottom .skill-list .skill-item .name2,
+.skill_wrap .group-bottom .skill-list .skill-item .name {
+  font-family: "Boogy Brut Poster", serif;
+  padding-right: 80px;
+  font-weight: 400;
+  font-size: 5rem;
+  line-height: 1.1;
+  letter-spacing: 0.04em;
+  overflow: hidden;
+}
+
+@media (max-width: 1024px) {
+  .skill_wrap .group-bottom .skill-list .skill-item .name2,
+  .skill_wrap .group-bottom .skill-list .skill-item .name {
+    font-size: 2.5rem;
+    line-height: 1.05;
+  }
+}
+
+@media (max-width: 768px) {
+  .skill_wrap .group-bottom .skill-list .skill-item .name2,
+  .skill_wrap .group-bottom .skill-list .skill-item .name {
+    font-size: 2rem;
+    line-height: 1.125;
+  }
+
+  .skill_wrap .group-bottom .skill-list .skill-item .name2 span,
+  .skill_wrap .group-bottom .skill-list .skill-item .name span {
+    display: block;
+    -webkit-transition: opacity 0.4s cubic-bezier(0.37, 0, 0.63, 1),
+      -webkit-transform 0.4s cubic-bezier(0.37, 0, 0.63, 1);
+    transition: opacity 0.4s cubic-bezier(0.37, 0, 0.63, 1),
+      -webkit-transform 0.4s cubic-bezier(0.37, 0, 0.63, 1);
+    transition: transform 0.4s cubic-bezier(0.37, 0, 0.63, 1),
+      opacity 0.4s cubic-bezier(0.37, 0, 0.63, 1);
+    transition: transform 0.4s cubic-bezier(0.37, 0, 0.63, 1),
+      opacity 0.4s cubic-bezier(0.37, 0, 0.63, 1),
+      -webkit-transform 0.4s cubic-bezier(0.37, 0, 0.63, 1);
+  }
+}
+
+@media (max-width: 768px) {
+  .skill_wrap .group-bottom .skill-list .skill-item .name {
+    text-align: center;
+  }
+}
+
+.skill_wrap .group-bottom .skill-list .skill-item .name2 {
+  position: absolute;
+  top: 50%;
+  right: 5%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  opacity: 0;
+  -webkit-transition: opacity 0.4s cubic-bezier(0.37, 0, 0.63, 1);
+  transition: opacity 0.4s cubic-bezier(0.37, 0, 0.63, 1);
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .skill_wrap .group-bottom .skill-list .skill-item .name2 {
+    bottom: 0;
+    top: unset;
+    -webkit-transform: unset;
+    transform: unset;
+    opacity: 1;
+  }
+
+  .skill_wrap .group-bottom .skill-list .skill-item .name2 span {
+    -webkit-transform: translateY(-100%);
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .skill_wrap
+    .group-bottom
+    .skill-list
+    .skill-item:nth-child(5)
+    .name-wrap
+    .name2,
+  .skill_wrap
+    .group-bottom
+    .skill-list
+    .skill-item:nth-child(3)
+    .name-wrap
+    .name2 {
+    left: unset;
+  }
+}
+
+@media (max-width: 768px) {
+  .skill_wrap .group-bottom .skill-list .skill-item:nth-child(6) .name-wrap,
+  .skill_wrap .group-bottom .skill-list .skill-item:nth-child(2) .name-wrap {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+}
+
+/* 푸터 */
 
 #footer {
   font-family: "newyork";
   font-size: 8rem;
   text-align: center;
   color: #fff;
-  padding: 10rem;
+  padding: 8rem;
 }
