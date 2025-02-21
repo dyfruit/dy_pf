@@ -25,12 +25,12 @@
     <progress max="100" value="0"></progress>
   </div>
   <div id="wrap">
+          <div class="cursor"></div>
     <div class="main-container">
     <!--header-->
     <header class="header">
-      <div class="cursor"></div>
       <div class="header_inner">
-        <a href="/index.html">
+        <a href="#">
           <h1 class="logo box01">KDY</h1>
         </a>
         <ul class="gnb">
@@ -62,9 +62,6 @@
             </div>
           </div>
         </div>
-      </body>
-    </div>
-  </div>
 </body>
 
 <script>
@@ -75,8 +72,9 @@
     scrollTrigger: { scrub: 0.3 }
 });
 
-  let mouseCursor = document.querySelector(".cursor");
-let navLinks = document.querySelectorAll(".gnb li a, .parallax__item__img, .logo");
+
+let mouseCursor = document.querySelector(".cursor");
+let navLinks = document.querySelectorAll(".gnb li a, .parallax__item__img, .logo, .txt01, .txt02, .aside span, #footer, .skill-list");
 
 // 마우스 이동 시 커서 위치 업데이트
 window.addEventListener("mousemove", (e) => {
@@ -87,11 +85,11 @@ window.addEventListener("mousemove", (e) => {
 // 네비게이션 링크에 마우스 호버 효과 추가
 navLinks.forEach((link) => {
   link.addEventListener("mouseenter", () => {
-    mouseCursor.classList.add("cursor-grow");
+    mouseCursor.classList.add("cursor-grow", "cursor-invert"); // 커서 확대 + 색반전
     link.classList.add("hovered-link");
   });
   link.addEventListener("mouseleave", () => {
-    mouseCursor.classList.remove("cursor-grow");
+    mouseCursor.classList.remove("cursor-grow", "cursor-invert"); // 원래대로 복귀
     link.classList.remove("hovered-link");
   });
 });
