@@ -109,6 +109,7 @@ progress::-moz-progress-bar {
 }
 
 .header_inner {
+  width:100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -121,19 +122,15 @@ progress::-moz-progress-bar {
   font-weight: bold;
 }
 
-.gnb {
-  display: flex;
-  gap: 20px;
-}
-
-.gnb li {
+.gnb a{
+  color:#fff;
   text-align: center;
   line-height: 30px;
   cursor: pointer;
   position: relative;
 }
 
-.gnb li::after {
+.gnb a::after {
   content: "";
   position: absolute;
   bottom: -5px;
@@ -144,47 +141,37 @@ progress::-moz-progress-bar {
   transition: width 250ms ease-in-out, left 250ms ease-in-out;
 }
 
-.gnb li:hover::after {
+.gnb a:hover::after {
   width: 100%;
   left: 0;
-}
-
-.gnb li:not(:last-child) {
-  margin-right: 20px;
 }
 
 @media all and (min-width: 1024px) and (max-width: 1279px) {
   .main-container {
     padding: 0 2%;
   }
-  .header{
-    max-width: 1200px;
-  }
-  .header_inner {
-    font-size: 25px;
-    max-width: 945px;
-  }
   .aside{
     max-width: 1000px;
+  }
+  .header{
+      max-width: 1190px;
   }
 }
 
 @media all and (min-width: 768px) and (max-width: 1023px) {
-  .header_inner {
-    max-width: 700px;
-  }
+  
 }
 
 @media all and (min-width: 480px) and (max-width: 767px) {
-  .header{
-    width:440px;
-  }
   .contact p{
     left: 3%;
   }
 }
 
 @media all and (max-width: 479px) {
+  .reserved{
+    display:none;
+  }
 }
 
 /*메인비주얼 텍스트*/
@@ -283,7 +270,7 @@ progress::-moz-progress-bar {
 }
 
 .parallax__item__num {
-  font-size: 80px;
+  font-size: 7rem;
   color: #fff;
   position: absolute;
   right: 0;
@@ -291,6 +278,12 @@ progress::-moz-progress-bar {
   font-family: "Lato";
   font-weight: 100;
   z-index: 100;
+}
+
+@media all and (max-width: 479px) {
+  .parallax__item__num{
+    font-size:4rem;
+  }
 }
 
 .parallax__item__imgWrap {
@@ -336,11 +329,18 @@ progress::-moz-progress-bar {
     padding-bottom: 40%;
 } 
 }
+@media (max-width: 768px) {
+.parallax__item__imgWrap{
+  width:50%;
+  padding-bottom:50%;
+}
+}
+
 
 /*사이드*/
 .contact p {
   position: fixed;
-  left: 50px;
+  left: 2rem;
   top: 50%;
   right: auto;
   bottom: auto;
@@ -421,7 +421,7 @@ progress::-moz-progress-bar {
 .visual__loop span {
   font-family: "Pretendard-Regular";
   color: #fff;
-  font-size: 28px;
+  font-size: 1.5rem;
   white-space: nowrap;
   margin-right: 50px;
 }
@@ -464,9 +464,9 @@ progress::-moz-progress-bar {
 }
 
 @media (max-width: 768px) {
-  .skill_wrap .group-bottom a {
+    .skill_wrap .group-bottom a {
     pointer-events: none;
-  }
+    }
 }
 
 .skill_wrap .group-bottom .skill-list .skill-item {
@@ -510,42 +510,11 @@ progress::-moz-progress-bar {
 
 @media (max-width: 768px) {
   .skill_wrap .group-bottom .skill-list .skill-item .name-wrap {
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
     justify-content: center;
   }
-
-  .skill_wrap
-    .group-bottom
-    .skill-list
-    .skill-item
-    .name-wrap.on
-    .name-box
-    .name
-    span {
-    -webkit-transform: translateY(100%);
-    transform: translateY(100%);
-    opacity: 0;
-  }
-
-  .skill_wrap .group-bottom .skill-list .skill-item .name-wrap.on .name2 span {
-    -webkit-transform: translateY(0%);
-    transform: translateY(0%);
-    opacity: 1;
-  }
 }
 
-@media (max-width: 768px) {
-  .skill_wrap .group-bottom .skill-list .skill-item .name-box {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-  }
-}
+
 
 .skill_wrap .group-bottom .skill-list .skill-item .number {
   font-family: "DegularDisplay", sans-serif;
@@ -599,7 +568,6 @@ progress::-moz-progress-bar {
 .name2 span,
   .name span {
     display: block;
-
   }
 }
 
@@ -613,55 +581,10 @@ progress::-moz-progress-bar {
   position: absolute;
   top: 50%;
   right: 5%;
-  -webkit-transform: translateY(-50%);
-  transform: translateY(-50%);
   opacity: 0;
-  -webkit-transition: opacity 0.4s cubic-bezier(0.37, 0, 0.63, 1);
-  transition: opacity 0.4s cubic-bezier(0.37, 0, 0.63, 1);
   color: #fff;
 }
 
-@media (max-width: 768px) {
-  .skill_wrap .group-bottom .skill-list .skill-item .name2 {
-    bottom: 0;
-    top: unset;
-    -webkit-transform: unset;
-    transform: unset;
-    opacity: 1;
-  }
-
-  .skill_wrap .group-bottom .skill-list .skill-item .name2 span {
-    -webkit-transform: translateY(-100%);
-    transform: translateY(-100%);
-    opacity: 0;
-  }
-}
-
-@media (max-width: 768px) {
-  .skill_wrap
-    .group-bottom
-    .skill-list
-    .skill-item:nth-child(5)
-    .name-wrap
-    .name2,
-  .skill_wrap
-    .group-bottom
-    .skill-list
-    .skill-item:nth-child(3)
-    .name-wrap
-    .name2 {
-    left: unset;
-  }
-}
-
-@media (max-width: 768px) {
-  .skill_wrap .group-bottom .skill-list .skill-item:nth-child(6) .name-wrap,
-  .skill_wrap .group-bottom .skill-list .skill-item:nth-child(2) .name-wrap {
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-  }
-}
 
 /* 푸터 */
 
@@ -683,6 +606,22 @@ progress::-moz-progress-bar {
 }
 }
 
+@media (max-width: 768px) {
+#footer{
+  font-size:4rem;
+  padding:4rem;
+}
+
+.visual {
+  margin:50px 0 50px 0;
+}
+}
+
+@media (max-width: 479px){
+  #footer{      
+  font-size: 3rem;
+      }
+    }
 
 /* 서브01 */
 /*gird*/
