@@ -20,48 +20,93 @@
 <script src="https://cdn.jsdelivr.net/npm/lenis@2.0.1/dist/lenis.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/split-type@0.5.0/dist/split-type.min.js"></script>
 
-  <!--진행바-->
+   <!--진행바-->
   <div class="parallax__progress">
     <progress max="100" value="0"></progress>
   </div>
   <div id="wrap">
+    <div class="main-container">
           <div class="cursor"></div>
     <div class="main-container">
     <!--header-->
     <header class="header">
       <div class="header_inner">
-        <a href="#">
-          <h1 class="logo box01">KDY</h1>
-        </a>
+        <div class="logo"><a href="../index.html">KDY</a></div>
         <ul class="gnb">
-          <li><a href="sub/sub01.html">PORTFOLIO</a></li>
+          <li><a href="#">PORTFOLIO</a></li>
           <li><a href="#">CONTACT</a></li>
         </ul>
       </div>
     </header>
 
         <!--grid-->
-
-        <div class="grid_wrap">
-          <div class="grid_item">
-            <div class="grid_list">
-              <a href=""
-                ><img src="https://picsum.photos/1000/1000" alt="img01"
-              /></a>
-            </div>
-            <div class="grid_list">
-              <img src="https://picsum.photos/1000/1000" alt="img01" />
-            </div>
-          </div>
-          <div class="grid_item">
-            <div class="grid_list">
-              <img src="https://picsum.photos/1000/1000" alt="img01" />
-            </div>
-            <div class="grid_list">
-              <img src="https://picsum.photos/1000/1000" alt="img01" />
-            </div>
-          </div>
+<section id="grid">
+  <div class="grid_wrap">
+    <div class="grid_list">
+      <a href="#">
+        <div class="grid_img">
+          <img src="https://picsum.photos/600/600" alt="img01" />
         </div>
+      </a>
+      <div class="grid_txt">
+        <span class="tag01"><p>title</p></span>
+      </div>
+    </div>
+    <div class="grid_list">
+      <a href="#">
+        <div class="grid_img">
+          <img src="https://picsum.photos/600/600" alt="img02" />
+        </div>
+      </a>
+      <div class="grid_txt">
+        <p>내용</p>
+      </div>
+    </div>
+    <div class="grid_list">
+      <a href="#">
+        <div class="grid_img">
+          <img src="https://picsum.photos/600/600" alt="img03" />
+        </div>
+      </a>
+      <div class="grid_txt">
+        <p>내용</p>
+      </div>
+    </div>
+    <div class="grid_list">
+      <a href="#">
+        <div class="grid_img">
+          <img src="https://picsum.photos/600/600" alt="img04" />
+        </div>
+      </a>
+      <div class="grid_txt">
+        <p>내용</p>
+      </div>
+    </div>
+    <div class="grid_list">
+      <a href="#">
+        <div class="grid_img">
+          <img src="https://picsum.photos/600/600" alt="img05" />
+        </div>
+      </a>
+      <div class="grid_txt">
+        <p>내용</p>
+      </div>
+    </div>
+    <div class="grid_list">
+      <a href="#">
+        <div class="grid_img">
+          <img src="https://picsum.photos/600/600" alt="img06" />
+        </div>
+      </a>
+      <div class="grid_txt">
+        <p>내용</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+    </div>
+  </div>
 </body>
 
 <script>
@@ -74,7 +119,7 @@
 
 
 let mouseCursor = document.querySelector(".cursor");
-let navLinks = document.querySelectorAll(".gnb li a, .parallax__item__img, .logo, .txt01, .txt02, .aside span, #footer, .skill-list");
+let navLinks = document.querySelectorAll(".gnb li a, .logo, .aside span, #footer,.grid_list");
 
 // 마우스 이동 시 커서 위치 업데이트
 window.addEventListener("mousemove", (e) => {
@@ -93,6 +138,7 @@ navLinks.forEach((link) => {
     link.classList.remove("hovered-link");
   });
 });
+
 
 </script>
 </html>
