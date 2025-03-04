@@ -287,8 +287,8 @@ progress::-moz-progress-bar {
 }
 
 .parallax__item__imgWrap {
-  width: 30%;
-  padding-bottom: 18%;
+  width: 35%;
+  padding-bottom: 23%;
   position: relative;
   overflow: hidden;
 }
@@ -310,7 +310,7 @@ progress::-moz-progress-bar {
 }
 
 #section1 .parallax__item__img {
-  background-image: url(https://picsum.photos/700/700);
+  background-image: url(../image/dental_note.jpg);
 }
 #section2 .parallax__item__img {
   background-image: url(https://picsum.photos/700/700);
@@ -433,12 +433,6 @@ progress::-moz-progress-bar {
 }
 .name {
   color: #fff;
-}
-
-.name2 {
-  opacity: 0;
-  transform: translateY(10px);
-  transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
 .skill_wrap {
@@ -579,10 +573,11 @@ progress::-moz-progress-bar {
 
 .skill_wrap .group-bottom .skill-list .skill-item .name2 {
   position: absolute;
-  top: 50%;
+  top: 10%;
   right: 5%;
-  opacity: 0;
   color: #fff;
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
 
@@ -640,7 +635,20 @@ progress::-moz-progress-bar {
   gap: 30px;
   width: 100%;
 }
+@media (max-width: 1024px) {
+  .grid_wrap {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  #grid{
+    margin-top:11rem;
+  }
+}
 
+@media (max-width: 768px) {
+  .grid_wrap {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
 .grid_list {
   position: relative;
   overflow: hidden;
@@ -682,6 +690,3 @@ progress::-moz-progress-bar {
   transition: background 0.3s ease-in-out;
 }
 
-#grid span .tag01::after {
-  content: "";
-}
