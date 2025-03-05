@@ -158,10 +158,6 @@ progress::-moz-progress-bar {
   }
 }
 
-@media all and (min-width: 768px) and (max-width: 1023px) {
-  
-}
-
 @media all and (min-width: 480px) and (max-width: 767px) {
   .contact p{
     left: 3%;
@@ -522,10 +518,7 @@ progress::-moz-progress-bar {
   }
     .skill_wrap .group-bottom .skill-list .skill-item:first-child {
     border-top: 1px solid #fff;
-  
-  }
-    .skill_wrap .group-bottom .skill-list .skill-item {
-    padding: 1.5rem;
+
   }
   .skill_wrap .group-bottom a {
     pointer-events: none;
