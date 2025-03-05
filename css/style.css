@@ -642,6 +642,9 @@ progress::-moz-progress-bar {
     .parallax__item__num {
       font-size:3rem;
     }
+    .visual__loop span{
+      font-size:1rem;
+    }
 }
 
 
