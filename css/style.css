@@ -641,6 +641,32 @@ progress::-moz-progress-bar {
     }
 }
 
+@media (max-width: 430px) {
+  .skill_wrap .group-bottom .skill-list .skill-item .name-box {
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  }
+
+  .skill_wrap .group-bottom .skill-list .skill-item .name2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transform: translateY(100%);
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  }
+
+  .skill_wrap .group-bottom .skill-list .skill-item.hover .name-box {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+
+  .skill_wrap .group-bottom .skill-list .skill-item.hover .name2 {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+
 .skill_wrap .group-bottom .skill-list .skill-item .name2 {
   position: absolute;
   top: 10%;
