@@ -323,16 +323,16 @@ progress::-moz-progress-bar {
 }
 
 #section1 .parallax__item__img {
-  background-image: url(../image/arbe_page.jpg);
+  background-image: url(/image/arbe_page.jpg);
 }
 #section2 .parallax__item__img {
-  background-image: url(../image/dental_note.jpg);
+  background-image: url(/image/dental_note.jpg);
 }
 #section3 .parallax__item__img {
-  background-image: url(../image/content.jpg);
+  background-image: url(/image/content.jpg);
 }
 #section4 .parallax__item__img {
-  background-image: url(../image/printed.jpg);
+  background-image: url(/image/printed.jpg);
 }
 
 
@@ -470,12 +470,6 @@ progress::-moz-progress-bar {
   transition: opacity 0.3s ease;
 }
 
-@media (max-width: 768px) {
-    .skill_wrap .group-bottom a {
-    pointer-events: none;
-    }
-}
-
 .skill_wrap .group-bottom .skill-list .skill-item {
   padding: 1rem 3rem;
   overflow: hidden;
@@ -488,37 +482,13 @@ progress::-moz-progress-bar {
   width:100%;
 }
 
-@media (max-width: 768px) {
-  .skill_wrap .group-bottom .skill-list .skill-item {
-    padding: 1.5rem;
-  }
-}
-
-@media (max-width: 768px) {
-  .skill_wrap .group-bottom .skill-list .skill-item:first-child {
-    border-top: 1px solid #fff;
-  }
-}
-
 .skill_wrap .group-bottom .skill-list .skill-item.mobile {
   display: none;
-}
-
-@media (max-width: 768px) {
-  .skill_wrap .group-bottom .skill-list .skill-item.mobile {
-    display: block;
-  }
 }
 
 .skill_wrap .group-bottom .skill-list .skill-item .name-wrap {
   position: relative;
   display: flex;
-}
-
-@media (max-width: 768px) {
-  .skill_wrap .group-bottom .skill-list .skill-item .name-wrap {
-    justify-content: center;
-  }
 }
 
 
@@ -544,6 +514,22 @@ progress::-moz-progress-bar {
   .skill_wrap .group-bottom .skill-list .skill-item .number {
     padding: 0;
   }
+.skill_wrap .group-bottom .skill-list .skill-item .name-wrap {
+    justify-content: center;
+  }
+    .skill_wrap .group-bottom .skill-list .skill-item.mobile {
+    display: block;
+  }
+    .skill_wrap .group-bottom .skill-list .skill-item:first-child {
+    border-top: 1px solid #fff;
+  
+  }
+    .skill_wrap .group-bottom .skill-list .skill-item {
+    padding: 1.5rem;
+  }
+  .skill_wrap .group-bottom a {
+    pointer-events: none;
+    }
 }
 
 .skill_wrap .group-bottom .skill-list .skill-item .name2,
@@ -679,7 +665,11 @@ progress::-moz-progress-bar {
 }
 
 @media (max-width: 768px) {
-#footer{
+.parallax__progress{
+  display:none;
+}
+
+  #footer{
   font-size:4rem;
   padding:4rem;
 }
@@ -778,4 +768,3 @@ progress::-moz-progress-bar {
 .grid_txt h4{
   margin-left:10px;
 }
-
