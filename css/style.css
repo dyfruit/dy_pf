@@ -323,16 +323,16 @@ progress::-moz-progress-bar {
 }
 
 #section1 .parallax__item__img {
-  background-image: url(image/arbe_page.jpg);
+  background-image: url(../image/arbe_page.jpg);
 }
 #section2 .parallax__item__img {
-  background-image: url(image/dental_note.jpg);
+  background-image: url(../image/dental_note.jpg);
 }
 #section3 .parallax__item__img {
-  background-image: url(image/content.jpg);
+  background-image: url(../image/content.jpg);
 }
 #section4 .parallax__item__img {
-  background-image: url(image/printed.jpg);
+  background-image: url(../image/printed.jpg);
 }
 
 
