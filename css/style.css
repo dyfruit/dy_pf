@@ -588,6 +588,9 @@ progress::-moz-progress-bar {
   #section03 .name2{
     font-size:2.5rem;
   }
+  .header_inner{
+    max-width:950px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -602,17 +605,40 @@ progress::-moz-progress-bar {
     display: block;
   }
 
+  .contact{
+    display:none;
+  }
+
   #footer p{
     font-size:4rem;
   }
     .skill_wrap .group-bottom .skill-list .skill-item .name {
     text-align: center;
   }
+
+    .header_inner{
+    max-width:700px;
+  }
+
+  .aside .reserved{
+    display:none;
+  }
+
 }
 
 @media (max-width: 479px) {
   #footer p{
     font-size:2rem;
+  }
+
+  .header_inner{
+    max-width:380px;
+  }
+}
+
+@media (max-width: 380px) {
+  .header_inner{
+    max-width:300px;
   }
 }
 
@@ -746,3 +772,4 @@ progress::-moz-progress-bar {
 .grid_txt h4{
   margin-left:10px;
 }
+
