@@ -292,37 +292,60 @@ navLinks.forEach((link) => {
 });
 
 
-document.querySelectorAll(".skill-item").forEach((item) => {
+// document.querySelectorAll(".skill-item").forEach((item) => {
+//     item.addEventListener("mouseenter", () => {
+//         gsap.to(item.querySelector(".name-box"), { opacity: 1, y: 0, duration: 0.2, ease: "power2.out" });
+//         gsap.to(item.querySelector(".name2"), { opacity: 1, y: 0, duration: 0.2, ease: "power2.out" });
+//     });
+
+//     item.addEventListener("mouseleave", () => {
+//         gsap.to(item.querySelector(".name-box"), { opacity: 1, y: 0, duration: 0.2, ease: "power2.out" });
+//         gsap.to(item.querySelector(".name2"), { opacity: 0, y: 0, duration: 0.2, ease: "power2.out" });
+//     });
+// });
+
+// const hoverImage = document.querySelector(".hover-image");
+// const skillItems = document.querySelectorAll(".skill-item");
+
+// skillItems.forEach((item) => {
+//   item.addEventListener("mouseenter", (e) => {
+//     const imgSrc = item.getAttribute("data-img");
+//     hoverImage.style.backgroundImage = `url(${imgSrc})`;
+//     hoverImage.style.opacity = "1";
+//   });
+
+//   item.addEventListener("mousemove", (e) => {
+//     hoverImage.style.left = `${e.pageX}px`;
+//     hoverImage.style.top = `${e.pageY}px`;
+//   });
+
+//   item.addEventListener("mouseleave", () => {
+//     hoverImage.style.opacity = "0";
+//   });
+// });
+
+      document.querySelectorAll(".skill-item").forEach((item) => {
     item.addEventListener("mouseenter", () => {
         gsap.to(item.querySelector(".name-box"), { opacity: 1, y: 0, duration: 0.2, ease: "power2.out" });
         gsap.to(item.querySelector(".name2"), { opacity: 1, y: 0, duration: 0.2, ease: "power2.out" });
+
+        // 반응형 적용 (max-width: 430px)
+        if (window.innerWidth <= 430) {
+            item.classList.add("hover");
+        }
     });
 
     item.addEventListener("mouseleave", () => {
         gsap.to(item.querySelector(".name-box"), { opacity: 1, y: 0, duration: 0.2, ease: "power2.out" });
         gsap.to(item.querySelector(".name2"), { opacity: 0, y: 0, duration: 0.2, ease: "power2.out" });
+
+        // 반응형 적용 (max-width: 430px)
+        if (window.innerWidth <= 430) {
+            item.classList.remove("hover");
+        }
     });
 });
 
-const hoverImage = document.querySelector(".hover-image");
-const skillItems = document.querySelectorAll(".skill-item");
-
-skillItems.forEach((item) => {
-  item.addEventListener("mouseenter", (e) => {
-    const imgSrc = item.getAttribute("data-img");
-    hoverImage.style.backgroundImage = `url(${imgSrc})`;
-    hoverImage.style.opacity = "1";
-  });
-
-  item.addEventListener("mousemove", (e) => {
-    hoverImage.style.left = `${e.pageX}px`;
-    hoverImage.style.top = `${e.pageY}px`;
-  });
-
-  item.addEventListener("mouseleave", () => {
-    hoverImage.style.opacity = "0";
-  });
-});
 
 
 </script>
