@@ -626,8 +626,8 @@ progress::-moz-progress-bar {
   .header_inner{
     max-width:380px;
   }
-  .parallax__item__num{
-  display:none;
+  #section2 .parallax__item__num{
+  font-size:2rem;
   }
 #section01 .parallax__item__text{
   font-size:6vw;
