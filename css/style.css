@@ -233,7 +233,7 @@ progress::-moz-progress-bar {
 
 /*서브 텍스트*/
 
-.sub-txt-cont {
+/* .sub-txt-cont {
   width: 100%;
   height: 100vh;
   position: relative;
@@ -248,9 +248,22 @@ progress::-moz-progress-bar {
   top: 50%;
   left: 50%;
   font-size: 3rem;
-}
+} */
 
-/* section01 */
+
+#section01 .parallax__item__text {
+            font-size: 4vw;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            padding: 30px;
+            width: 100%;
+            text-align: center;
+            color:#fff;
+        }
+
+/* section02 */
 
 #parallax__cont {
   overscroll-behavior: none;
@@ -260,7 +273,7 @@ progress::-moz-progress-bar {
   flex-wrap: nowrap;
 }
 
-.parallax__item {
+.parallax_item, .parallax__item {
   width: 100%;
   height: 100vh;
   position: relative;
@@ -294,8 +307,8 @@ progress::-moz-progress-bar {
 }
 .parallax__item__img {
   position: absolute;
-  left: -5%;
-  top: -5%;
+  left: 0%;
+  top: 0%;
   width: 100%;
   height: 100%;
   background-repeat: no-repeat;
@@ -310,16 +323,16 @@ progress::-moz-progress-bar {
 }
 
 #section1 .parallax__item__img {
-  background-image: url(../image/dental_note.jpg);
+  background-image: url(../image/arbe_page.jpg);
 }
 #section2 .parallax__item__img {
-  background-image: url(https://picsum.photos/700/700);
+  background-image: url(../image/dental_note.jpg);
 }
 #section3 .parallax__item__img {
-  background-image: url(https://picsum.photos/700/700);
+  background-image: url(../image/content.jpg);
 }
 #section4 .parallax__item__img {
-  background-image: url(https://picsum.photos/700/700);
+  background-image: url(../image/printed.jpg);
 }
 
 
@@ -428,7 +441,7 @@ progress::-moz-progress-bar {
 
 /* skill */
 
-#section02{
+#section03{
   margin-top:8rem;
 }
 .name {
@@ -544,11 +557,36 @@ progress::-moz-progress-bar {
   overflow: hidden;
 }
 
+@media (max-width: 1440px) {
+  #section03 .name{
+    font-size:4rem;
+  }
+
+  #section03 .name2{
+    font-size:4rem;
+  }
+  #footer p{
+    font-size:6rem;
+  }
+}
+
+@media (max-width: 1279px) {
+.parallax__item__num{
+  font-size:5rem;
+}
+}
+
 @media (max-width: 1024px) {
   .skill_wrap .group-bottom .skill-list .skill-item .name2,
   .skill_wrap .group-bottom .skill-list .skill-item .name {
     font-size: 2.5rem;
     line-height: 1.05;
+  }
+  #section03 .name{
+    font-size:2.5rem;
+  }
+  #section03 .name2{
+    font-size:2.5rem;
   }
 }
 
@@ -563,11 +601,18 @@ progress::-moz-progress-bar {
   .name span {
     display: block;
   }
+
+  #footer p{
+    font-size:4rem;
+  }
+    .skill_wrap .group-bottom .skill-list .skill-item .name {
+    text-align: center;
+  }
 }
 
-@media (max-width: 768px) {
-  .skill_wrap .group-bottom .skill-list .skill-item .name {
-    text-align: center;
+@media (max-width: 479px) {
+  #footer p{
+    font-size:2rem;
   }
 }
 
@@ -655,17 +700,19 @@ progress::-moz-progress-bar {
 }
 
 .grid_img {
-  transition: transform 0.3s ease-in-out;
+  transition: transform 0.5s ease-in-out;
 }
 
 .grid_img img {
   width: 100%;
   height: 100%;
+  max-height: 580px;
   object-fit: cover;
+  object-position: center;
 }
 
 .grid_list:hover .grid_img {
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 
 .grid_txt {
@@ -675,7 +722,13 @@ progress::-moz-progress-bar {
   width: 100%;
   color: white;
   padding: 20px;
+  background-color: rgba(0, 0, 0, 0.6);
   transition: opacity 0.3s ease;
+  opacity: 0;
+}
+
+.grid_list:hover .grid_txt {
+  opacity: 1;
 }
 
 .grid_txt p {
@@ -687,6 +740,9 @@ progress::-moz-progress-bar {
   font-size: 16px;
   font-weight: bold;
   text-align: center;
-  transition: background 0.3s ease-in-out;
+  margin-top: 15px;
 }
 
+.grid_txt h4{
+  margin-left:10px;
+}
