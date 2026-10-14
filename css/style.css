@@ -105,7 +105,7 @@ progress::-moz-progress-bar {
   right: 0;
   padding: 0 3%;
   z-index: 1000;
-  box-sizing: border-box; /* 패딩이 너비에 포함되도록 설정 */
+  box-sizing: border-box;
 }
 
 .header_inner {
