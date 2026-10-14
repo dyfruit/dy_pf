@@ -150,9 +150,6 @@ progress::-moz-progress-bar {
   .main-container {
     padding: 0 2%;
   }
-  .aside {
-    max-width: 1000px;
-  }
   .header {
     max-width: 1190px;
   }
@@ -368,6 +365,8 @@ progress::-moz-progress-bar {
   font-family: "Pretendard-Regular";
   position: fixed;
   bottom: 15px;
+  left: 0;
+  right: 0;
   font-size: clamp(14px, 2vh, 20px);
   font-weight: 600;
   line-height: 1.2;
@@ -375,7 +374,8 @@ progress::-moz-progress-bar {
   z-index: 100;
   display: flex;
   justify-content: space-between;
-  align-items: end;
+  align-items: flex-end;
+  box-sizing: border-box; /* 패딩이 100% 너비 안으로 포함되도록 설정 */
 }
 
 .aside ul {
