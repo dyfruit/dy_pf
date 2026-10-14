@@ -15,7 +15,7 @@ a {
   text-decoration: none;
   cursor: none;
 }
-li{
+li {
   list-style: none;
 }
 html {
@@ -67,7 +67,7 @@ body {
 .main-container {
   width: 100%;
   max-width: 1800px;
-  margin:0 auto;
+  margin: 0 auto;
 }
 
 /*진행바*/
@@ -94,8 +94,7 @@ progress::-moz-progress-bar {
   background-attachment: fixed;
 }
 
-/*헤더*/
-
+/* 헤더 전체 공통 */
 .header {
   width: 100%;
   max-width: 1800px;
@@ -106,10 +105,11 @@ progress::-moz-progress-bar {
   right: 0;
   padding: 0 3%;
   z-index: 1000;
+  box-sizing: border-box; /* 패딩이 너비에 포함되도록 설정 */
 }
 
 .header_inner {
-  width:100%;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -122,8 +122,8 @@ progress::-moz-progress-bar {
   font-weight: bold;
 }
 
-.gnb a{
-  color:#fff;
+.gnb a {
+  color: #fff;
   text-align: center;
   line-height: 30px;
   cursor: pointer;
@@ -150,23 +150,23 @@ progress::-moz-progress-bar {
   .main-container {
     padding: 0 2%;
   }
-  .aside{
+  .aside {
     max-width: 1000px;
   }
-  .header{
-      max-width: 1190px;
+  .header {
+    max-width: 1190px;
   }
 }
 
 @media all and (min-width: 480px) and (max-width: 767px) {
-  .contact p{
+  .contact p {
     left: 3%;
   }
 }
 
 @media all and (max-width: 479px) {
-  .reserved{
-    display:none;
+  .reserved {
+    display: none;
   }
 }
 
@@ -246,18 +246,17 @@ progress::-moz-progress-bar {
   font-size: 3rem;
 } */
 
-
 #section01 .parallax__item__text {
-            font-size: 4vw;
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%, -50%);
-            padding: 30px;
-            width: 100%;
-            text-align: center;
-            color:#fff;
-        }
+  font-size: 4vw;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  padding: 30px;
+  width: 100%;
+  text-align: center;
+  color: #fff;
+}
 
 /* section02 */
 
@@ -269,7 +268,8 @@ progress::-moz-progress-bar {
   flex-wrap: nowrap;
 }
 
-.parallax_item, .parallax__item {
+.parallax_item,
+.parallax__item {
   width: 100%;
   height: 100vh;
   position: relative;
@@ -290,8 +290,8 @@ progress::-moz-progress-bar {
 }
 
 @media all and (max-width: 479px) {
-  .parallax__item__num{
-    font-size:4rem;
+  .parallax__item__num {
+    font-size: 4rem;
   }
 }
 
@@ -331,20 +331,18 @@ progress::-moz-progress-bar {
   background-image: url(../image/printed.jpg);
 }
 
-
-@media all and (min-width:1024px) and (max-width:1279px) { 
-.parallax__item__imgWrap {
+@media all and (min-width: 1024px) and (max-width: 1279px) {
+  .parallax__item__imgWrap {
     width: 45%;
     padding-bottom: 40%;
-} 
+  }
 }
 @media (max-width: 768px) {
-.parallax__item__imgWrap{
-  width:50%;
-  padding-bottom:50%;
+  .parallax__item__imgWrap {
+    width: 50%;
+    padding-bottom: 50%;
+  }
 }
-}
-
 
 /*사이드*/
 .contact p {
@@ -437,8 +435,8 @@ progress::-moz-progress-bar {
 
 /* skill */
 
-#section03{
-  margin-top:8rem;
+#section03 {
+  margin-top: 8rem;
 }
 .name {
   color: #fff;
@@ -473,9 +471,9 @@ progress::-moz-progress-bar {
   width: 100%;
 }
 
-.border-top{
+.border-top {
   border-top: 1px solid #fff;
-  width:100%;
+  width: 100%;
 }
 
 .skill_wrap .group-bottom .skill-list .skill-item.mobile {
@@ -486,8 +484,6 @@ progress::-moz-progress-bar {
   position: relative;
   display: flex;
 }
-
-
 
 .skill_wrap .group-bottom .skill-list .skill-item .number {
   font-family: "DegularDisplay", sans-serif;
@@ -510,19 +506,18 @@ progress::-moz-progress-bar {
   .skill_wrap .group-bottom .skill-list .skill-item .number {
     padding: 0;
   }
-.skill_wrap .group-bottom .skill-list .skill-item .name-wrap {
+  .skill_wrap .group-bottom .skill-list .skill-item .name-wrap {
     justify-content: center;
   }
-    .skill_wrap .group-bottom .skill-list .skill-item.mobile {
+  .skill_wrap .group-bottom .skill-list .skill-item.mobile {
     display: block;
   }
-    .skill_wrap .group-bottom .skill-list .skill-item:first-child {
+  .skill_wrap .group-bottom .skill-list .skill-item:first-child {
     border-top: 1px solid #fff;
-
   }
   .skill_wrap .group-bottom a {
     pointer-events: none;
-    }
+  }
 }
 
 .skill_wrap .group-bottom .skill-list .skill-item .name2,
@@ -537,22 +532,22 @@ progress::-moz-progress-bar {
 }
 
 @media (max-width: 1440px) {
-  #section03 .name{
-    font-size:4rem;
+  #section03 .name {
+    font-size: 4rem;
   }
 
-  #section03 .name2{
-    font-size:4rem;
+  #section03 .name2 {
+    font-size: 4rem;
   }
-  #footer p{
-    font-size:6rem;
+  #footer p {
+    font-size: 6rem;
   }
 }
 
 @media (max-width: 1279px) {
-.parallax__item__num{
-  font-size:5rem;
-}
+  .parallax__item__num {
+    font-size: 5rem;
+  }
 }
 
 @media (max-width: 1024px) {
@@ -561,14 +556,11 @@ progress::-moz-progress-bar {
     font-size: 2.5rem;
     line-height: 1.05;
   }
-  #section03 .name{
-    font-size:2.5rem;
+  #section03 .name {
+    font-size: 2.5rem;
   }
-  #section03 .name2{
-    font-size:2.5rem;
-  }
-  .header_inner{
-    max-width:950px;
+  #section03 .name2 {
+    font-size: 2.5rem;
   }
 }
 
@@ -579,67 +571,55 @@ progress::-moz-progress-bar {
     line-height: 1.125;
   }
 
-.name2 span,
+  .name2 span,
   .name span {
     display: block;
   }
 
-  .contact{
-    display:none;
+  .contact {
+    display: none;
   }
 
-  #footer p{
-    font-size:4rem;
+  #footer p {
+    font-size: 4rem;
   }
-    .skill_wrap .group-bottom .skill-list .skill-item .name {
+  .skill_wrap .group-bottom .skill-list .skill-item .name {
     text-align: center;
   }
 
-    .header_inner{
-    max-width:700px;
+  .aside .reserved {
+    display: none;
   }
-
-  .aside .reserved{
-    display:none;
-  }
-
 }
 
 @media (max-width: 479px) {
-  #footer p{
-    font-size:2rem;
+  #footer p {
+    font-size: 2rem;
   }
 
-  .header_inner{
-    max-width:380px;
+  .skill_wrap .group-bottom .skill-list .skill-item .number {
+    display: none;
   }
-      .skill_wrap .group-bottom .skill-list .skill-item .number{
-      display:none;
-    }
 }
 
 @media (max-width: 430px) {
-  .header_inner{
-    max-width:370px;
+  #section2 .parallax__item__num {
+    font-size: 2rem;
   }
-  #section2 .parallax__item__num{
-  font-size:2rem;
+  #section01 .parallax__item__text {
+    font-size: 2rem;
   }
-#section01 .parallax__item__text{
-  font-size:2rem;
+  .parallax__item__imgWrap {
+    width: 60%;
+    padding-bottom: 60%;
+  }
+  .parallax__item__num {
+    font-size: 3rem;
+  }
+  .visual__loop span {
+    font-size: 1rem;
+  }
 }
-    .parallax__item__imgWrap {
-        width: 60%;
-        padding-bottom: 60%;
-}
-    .parallax__item__num {
-      font-size:3rem;
-    }
-    .visual__loop span{
-      font-size:1rem;
-    }
-}
-
 
 .skill_wrap .group-bottom .skill-list .skill-item .name2 {
   position: absolute;
@@ -649,7 +629,6 @@ progress::-moz-progress-bar {
   opacity: 0;
   transition: opacity 0.3s ease, transform 0.3s ease;
 }
-
 
 /* 푸터 */
 
@@ -662,35 +641,35 @@ progress::-moz-progress-bar {
 }
 
 @media (max-width: 1024px) {
-#footer{
-  font-size: 6rem;
-  padding:6rem;
-}
-.visual {
-  margin:100px 0 100px 0;
-}
+  #footer {
+    font-size: 6rem;
+    padding: 6rem;
+  }
+  .visual {
+    margin: 100px 0 100px 0;
+  }
 }
 
 @media (max-width: 768px) {
-.parallax__progress{
-  display:none;
+  .parallax__progress {
+    display: none;
+  }
+
+  #footer {
+    font-size: 4rem;
+    padding: 4rem;
+  }
+
+  .visual {
+    margin: 50px 0 50px 0;
+  }
 }
 
-  #footer{
-  font-size:4rem;
-  padding:4rem;
+@media (max-width: 479px) {
+  #footer {
+    font-size: 3rem;
+  }
 }
-
-.visual {
-  margin:50px 0 50px 0;
-}
-}
-
-@media (max-width: 479px){
-  #footer{      
-  font-size: 3rem;
-      }
-    }
 
 /* 서브01 */
 /*gird*/
@@ -713,8 +692,8 @@ progress::-moz-progress-bar {
   .grid_wrap {
     grid-template-columns: repeat(2, 1fr);
   }
-  #grid{
-    margin-top:11rem;
+  #grid {
+    margin-top: 11rem;
   }
 }
 
@@ -772,6 +751,6 @@ progress::-moz-progress-bar {
   margin-top: 15px;
 }
 
-.grid_txt h4{
-  margin-left:10px;
+.grid_txt h4 {
+  margin-left: 10px;
 }
